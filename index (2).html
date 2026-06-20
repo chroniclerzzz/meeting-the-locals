@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPERATIONS BRIEF // PARISOT TACTICAL SOLUTIONS // MEETING THE LOCALS</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:        #141414;
+    --near-black:   #1c1c1c;
+    --charcoal:     #232323;
+    --panel:        #f7f6f4;
+    --panel-alt:    #efeeea;
+    --paper:        #fcfbf9;
+    --border:       #d9d5cd;
+    --border-dark:  #3a3a3a;
+    --ink:          #1c1c1c;
+    --ink-dim:      #55514a;
+    --ink-muted:    #8a857c;
+    --brick:        #8a2e28;
+    --brick-bright: #a8352d;
+    --brick-faint:  rgba(138,46,40,0.06);
+    --white:        #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #e4e1da;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--ink);
+    padding: 34px 20px 50px;
+  }
+
+  .page {
+    max-width: 840px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.02);
+    position: relative;
+  }
+
+  /* ── TOP RULE ── */
+  .top-rule {
+    height: 4px;
+    background: var(--brick);
+  }
+
+  /* ── HEADER / LETTERHEAD ── */
+  .letterhead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 26px 38px 22px;
+    border-bottom: 2px solid var(--black);
+  }
+
+  .letterhead-center {
+    text-align: center;
+  }
+
+  .lh-company {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--black);
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .lh-tagline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .lh-right {
+    text-align: right;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    color: var(--ink-muted);
+    letter-spacing: 1px;
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+  .lh-right strong {
+    display: block;
+    color: var(--ink);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+  }
+
+  /* ── DOC TITLE BAND ── */
+  .title-band {
+    padding: 24px 38px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+  }
+
+  .doc-kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .op-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+  }
+
+  .op-title .accent { color: var(--brick); }
+
+  .doc-meta-line {
+    display: flex;
+    gap: 28px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .dm-item {
+    font-size: 11px;
+  }
+  .dm-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 2px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .dm-value {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .dm-value.brick { color: var(--brick); font-weight: 600; }
+  .dm-value.pending {
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+
+  /* ── BODY ── */
+  .body {
+    padding: 30px 38px 36px;
+  }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 30px; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--black);
+  }
+
+  .sec-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--brick);
+    line-height: 1;
+  }
+
+  .sec-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .sec-tag {
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 2px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+
+  /* ── INTENT BLOCK ── */
+  .intent-block {
+    background: var(--panel);
+    border-left: 3px solid var(--brick);
+    padding: 16px 20px;
+    margin-bottom: 8px;
+  }
+  .intent-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .intent-text {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  /* ── FORCES TABLE ── */
+  .forces-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .force-col {
+    border: 1px solid var(--border);
+  }
+
+  .force-col-head {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 14px;
+  }
+  .force-col-head.hostile { background: var(--brick); }
+
+  .force-list {
+    list-style: none;
+    padding: 0;
+  }
+  .force-list li {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+  }
+  .force-list li:last-child { border-bottom: none; }
+  .force-list li.sub {
+    padding-left: 28px;
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    background: var(--panel);
+    position: relative;
+  }
+  .force-list li.sub::before {
+    content: '—';
+    position: absolute;
+    left: 14px;
+    color: var(--ink-muted);
+  }
+  .force-list .qty {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    color: var(--brick);
+    margin-right: 6px;
+  }
+
+  /* ── MISSION BLOCK ── */
+  .mission-block {
+    border: 1px solid var(--border);
+    background: var(--panel);
+  }
+  .mission-meta-row {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+  }
+  .mm-cell {
+    flex: 1;
+    padding: 12px 16px;
+    border-right: 1px solid var(--border);
+  }
+  .mm-cell:last-child { border-right: none; }
+  .mm-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 2px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .mm-value {
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .mission-body {
+    padding: 16px 18px;
+    font-size: 13.5px;
+    color: var(--ink-dim);
+    line-height: 1.85;
+  }
+
+  /* ── EXECUTION / CONOPS ── */
+  .conops-tree {
+    border-left: 2px solid var(--border);
+    padding-left: 20px;
+    margin-top: 4px;
+  }
+
+  .conops-item {
+    margin-bottom: 16px;
+  }
+
+  .conops-item-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .conops-item-body {
+    font-size: 13px;
+    color: var(--ink-dim);
+    line-height: 1.8;
+  }
+
+  .conops-sub {
+    margin-top: 8px;
+    padding: 12px 16px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    line-height: 1.8;
+  }
+
+  .conops-sub strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ── ROUTE STRIP ── */
+  .route-strip {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 18px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+  }
+  .route-node {
+    background: var(--black);
+    color: var(--white);
+    padding: 7px 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .route-node.brick { background: var(--brick); }
+  .route-arrow {
+    width: 28px;
+    height: 2px;
+    background: var(--ink-muted);
+    flex-shrink: 0;
+  }
+  .route-node-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .route-sub {
+    font-size: 8px;
+    color: var(--ink-muted);
+    letter-spacing: 1px;
+  }
+
+  /* ── TABLE GENERIC ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    border: 1px solid var(--border);
+  }
+  .data-table th {
+    background: var(--black);
+    color: var(--white);
+    text-align: left;
+    padding: 8px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink-dim);
+    vertical-align: top;
+  }
+  .data-table tr:nth-child(even) td { background: var(--panel); }
+  .data-table td:first-child {
+    font-weight: 600;
+    color: var(--ink);
+    width: 220px;
+  }
+
+  /* ── LINK CARD ── */
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    padding: 14px 18px;
+    margin-top: 8px;
+    text-decoration: none;
+  }
+  .link-icon {
+    width: 34px; height: 34px;
+    background: var(--brick);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .link-text {
+    flex: 1;
+  }
+  .link-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .link-url {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--brick);
+    word-break: break-all;
+    margin-top: 2px;
+  }
+
+  /* ── PENDING TAG ── */
+  .pending-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    margin-left: 10px;
+  }
+
+  /* ── SIGNATURE ── */
+  .sig-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+  }
+  .sig-line {
+    border-top: 1px solid var(--ink-muted);
+    padding-top: 7px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    color: var(--ink-muted);
+    letter-spacing: 1px;
+    line-height: 1.7;
+    text-transform: uppercase;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--black);
+    color: var(--ink-muted);
+    padding: 12px 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .footer span:first-child, .footer span:last-child { color: #8a857c; }
+
+  .text-brick { color: var(--brick); }
+  .text-muted { color: var(--ink-muted); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="top-rule"></div>
+
+  <!-- LETTERHEAD -->
+  <div class="letterhead">
+    <div class="letterhead-center">
+      <div class="lh-company">Parisot Tactical Solutions</div>
+      <div class="lh-tagline">Field Operations &amp; Advisory</div>
+    </div>
+    <div class="lh-right">
+      <strong>DOC REF</strong>
+      PTS-OP-MTL-2025-07
+    </div>
+  </div>
+
+  <!-- TITLE BAND -->
+  <div class="title-band">
+    <div class="doc-kicker">Operations Brief — 5 Week Plan</div>
+    <div class="op-title">Operation <span class="accent">Meeting The Locals</span></div>
+
+    <div class="doc-meta-line">
+      <div class="dm-item">
+        <div class="dm-label">Created By</div>
+        <div class="dm-value">Manager. B. "Camper" G.</div>
+      </div>
+      <div class="dm-item">
+        <div class="dm-label">Window</div>
+        <div class="dm-value">12 JUL 2025 — 16 AUG 2025</div>
+      </div>
+      <div class="dm-item">
+        <div class="dm-label">Status</div>
+        <div class="dm-value pending">Pending</div>
+      </div>
+      <div class="dm-item">
+        <div class="dm-label">Theatre</div>
+        <div class="dm-value">New Benio — Main Island</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- COMMANDER'S INTENT -->
+    <div class="section">
+      <div class="intent-block">
+        <div class="intent-label">Commander's Intent</div>
+        <div class="intent-text">Meet the Local Colombian Government forces near New Benio and meet local leaders. Gather any and all intel and conduct recon on the main island. Await word that the package is ready.</div>
+      </div>
+    </div>
+
+    <!-- 1. FORCES -->
+    <div class="section">
+      <div class="section-head">
+        <div class="sec-num">1</div>
+        <div class="sec-title">Enemy &amp; Friendly Forces</div>
+        <div class="sec-tag">Order of Battle</div>
+      </div>
+
+      <div class="forces-grid">
+        <div class="force-col">
+          <div class="force-col-head hostile">Enemy Forces</div>
+          <ul class="force-list">
+            <li>Colombian Cartel</li>
+            <li class="sub">Island-wide presence</li>
+          </ul>
+        </div>
+        <div class="force-col">
+          <div class="force-col-head">Friendly Forces</div>
+          <ul class="force-list">
+            <li>PTS — Ground Forces</li>
+            <li>PTS — Aviation</li>
+            <li class="sub"><span class="qty">2x</span>Cessna TTx</li>
+            <li class="sub"><span class="qty">2x</span>C-212-200 Aviocar</li>
+            <li>Colombian National Army</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. MISSION -->
+    <div class="section">
+      <div class="section-head">
+        <div class="sec-num">2</div>
+        <div class="sec-title">Mission</div>
+        <div class="sec-tag">Tasking</div>
+      </div>
+
+      <div class="mission-block">
+        <div class="mission-meta-row">
+          <div class="mm-cell">
+            <div class="mm-label">NLT Departure</div>
+            <div class="mm-value">2030 EST / 1100Z</div>
+          </div>
+          <div class="mm-cell">
+            <div class="mm-label">Date</div>
+            <div class="mm-value">26 JUL 2025</div>
+          </div>
+          <div class="mm-cell">
+            <div class="mm-label">Origin</div>
+            <div class="mm-value">Isla Mariana Airstrip</div>
+          </div>
+          <div class="mm-cell">
+            <div class="mm-label">Destination</div>
+            <div class="mm-value">Villa Mara, New Benio</div>
+          </div>
+        </div>
+        <div class="mission-body">
+          Ground and Aviation elements will deploy NLT 2030 EST, 26 July 2025 [1100 Zulu] from Isla Mariana Airstrip to Villa Mara near New Benio, via ground vehicle, conducting quick and fast reconnaissance on route to Villa Mara. Gain location of where the package is and move to pickup. <strong>Bring kit.</strong>
+        </div>
+      </div>
+
+      <div class="route-strip">
+        <div class="route-node-wrap">
+          <div class="route-node">Isla Mariana</div>
+          <div class="route-sub">Airstrip — Origin</div>
+        </div>
+        <div class="route-arrow"></div>
+        <div class="route-node-wrap">
+          <div class="route-node text-muted" style="background:#3a3a3a;">En Route Recon</div>
+          <div class="route-sub">Ground Vehicle</div>
+        </div>
+        <div class="route-arrow"></div>
+        <div class="route-node-wrap">
+          <div class="route-node brick">Villa Mara</div>
+          <div class="route-sub">New Benio — Objective</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. EXECUTION -->
+    <div class="section">
+      <div class="section-head">
+        <div class="sec-num">3</div>
+        <div class="sec-title">Execution</div>
+        <div class="sec-tag">CONOPs</div>
+      </div>
+
+      <div class="conops-tree">
+        <div class="conops-item">
+          <div class="conops-item-label">Concept of Operation — Scheme of Maneuver</div>
+          <div class="conops-item-body">
+            Parisot Tactical Solutions: Infill via IDAP vehicles to Villa Mara to meet Government Contact, while scouting possible points of interest while in route.
+          </div>
+          <div class="conops-sub">
+            Contact <strong>Vera Baltasar</strong> for more information on the status of Government forces and where the Helicopter is.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SERVICE AND SUPPORT -->
+    <div class="section">
+      <div class="section-head">
+        <div class="sec-num">4</div>
+        <div class="sec-title">Service &amp; Support</div>
+        <div class="sec-tag">Admin / Log</div>
+      </div>
+
+      <table class="data-table">
+        <tr>
+          <td>Ground Elements — Gear &amp; Uniforms</td>
+          <td>Established by subordinate units.</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 5. COMMAND AND SIGNAL -->
+    <div class="section">
+      <div class="section-head">
+        <div class="sec-num">5</div>
+        <div class="sec-title">Command &amp; Signal</div>
+        <div class="sec-tag">C2</div>
+      </div>
+
+      <div class="field-label" style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--ink-muted);text-transform:uppercase;margin-bottom:8px;">Signal</div>
+      <a href="https://docs.google.com/spreadsheets/d/104l9_62ZopmPL7ziEE7KLw-9N2MrUPb8pHHS16LIMRo/edit?usp=sharing" class="link-card" target="_blank" style="text-decoration:none;">
+        <div class="link-icon">TO</div>
+        <div class="link-text">
+          <div class="link-title">Parisot Tactical — TO&amp;E</div>
+          <div class="link-url">docs.google.com/spreadsheets/d/104l9_62ZopmPL7ziEE7KLw-9N2MrUPb8pHHS16LIMRo</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- 6. PYRO -->
+    <div class="section">
+      <div class="section-head">
+        <div class="sec-num">6</div>
+        <div class="sec-title">Pyro</div>
+        <div class="sec-tag">Munitions</div>
+      </div>
+
+      <div class="field-label" style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--ink-muted);text-transform:uppercase;margin-bottom:8px;">Reference</div>
+      <a href="https://docs.google.com/spreadsheets/d/104l9_62ZopmPL7ziEE7KLw-9N2MrUPb8pHHS16LIMRo/edit?usp=sharing" class="link-card" target="_blank" style="text-decoration:none;">
+        <div class="link-icon">TO</div>
+        <div class="link-text">
+          <div class="link-title">Parisot Tactical — TO&amp;E</div>
+          <div class="link-url">docs.google.com/spreadsheets/d/104l9_62ZopmPL7ziEE7KLw-9N2MrUPb8pHHS16LIMRo</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="sig-block">
+      <div class="sig-line">
+        ________________________<br>
+        Created By<br>
+        Manager. B. "Camper" G.
+      </div>
+      <div class="sig-line">
+        ________________________<br>
+        Approved By<br>
+        &nbsp;
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>PTS-OP-MTL-2025-07</span>
+    <span>Parisot Tactical Solutions</span>
+    <span>Status: Pending</span>
+  </div>
+
+</div>
+
+</body>
+</html>
